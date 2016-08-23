@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvName"
-        app:selectionDivider="@drawable/divider_dark_gradient_horizontal"
+        app:selectionDivider="@drawable/divider_orange_gradient_horizontal"
         app:selectionDividerActiveAlpha="100"
         app:selectionDividerDimmedAlpha="255"
         app:selectionDividerWidth="2px"

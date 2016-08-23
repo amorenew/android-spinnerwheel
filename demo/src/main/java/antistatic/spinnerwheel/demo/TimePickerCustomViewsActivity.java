@@ -1,15 +1,5 @@
 package antistatic.spinnerwheel.demo;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Locale;
-
-import antistatic.spinnerwheel.AbstractWheel;
-import antistatic.spinnerwheel.adapters.AbstractWheelTextAdapter;
-import antistatic.spinnerwheel.adapters.ArrayWheelAdapter;
-import antistatic.spinnerwheel.adapters.NumericWheelAdapter;
-
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
@@ -17,13 +7,27 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+
+import antistatic.spinnerwheel.AbstractWheel;
+import antistatic.spinnerwheel.ScrollPickerView;
+import antistatic.spinnerwheel.adapters.AbstractWheelTextAdapter;
+import antistatic.spinnerwheel.adapters.ArrayWheelAdapter;
+import antistatic.spinnerwheel.adapters.NumericWheelAdapter;
+
 public class TimePickerCustomViewsActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.time_picker_custom);
-
+        ScrollPickerView scrollPickerView = (ScrollPickerView) findViewById(R.id.scrollPicker);
+        scrollPickerView.setName("Child Age");
+        scrollPickerView.setMinimumValue(1);
+        scrollPickerView.setMaximumValue(17);
         final AbstractWheel hours = (AbstractWheel) findViewById(R.id.hour_horizontal);
         NumericWheelAdapter hourAdapter = new NumericWheelAdapter(this, 0, 23, "%02d");
         hourAdapter.setItemResource(R.layout.wheel_text_centered);

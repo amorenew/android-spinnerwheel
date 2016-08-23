@@ -1,45 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:layout_height="match_parent"
                 android:layout_width="match_parent"
+    android:layout_height="match_parent"
         >
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="15sp"
             android:layout_alignParentTop="true"
-            android:textSize="14sp"
+        android:padding="15sp"
             android:text="Using customized and horizontal wheel views"
+        android:textSize="14sp"
             />
     <LinearLayout
-            android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
             android:gravity="center"
-            android:layout_centerInParent="true">
+        android:orientation="vertical">
 
         <antistatic.spinnerwheel.WheelHorizontalView android:id="@+id/hour_horizontal"
-                app:visibleItems="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
                 app:selectionDivider="@drawable/divider_dark_gradient_horizontal"
                 app:selectionDividerWidth="1px"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"/>
+            app:visibleItems="3" />
         <antistatic.spinnerwheel.WheelHorizontalView android:id="@+id/mins"
-                app:visibleItems="4"
+            android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content"/>
+            app:visibleItems="4" />
 
         <antistatic.spinnerwheel.WheelVerticalView android:id="@+id/day"
-                app:visibleItems="4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
                 app:selectionDivider="@drawable/divider_dark_gradient_horizontal"
-                app:selectionDividerHeight="1px"
                 app:selectionDividerActiveAlpha="100"
                 app:selectionDividerDimmedAlpha="255"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content" />
+            app:selectionDividerHeight="1px"
+            app:visibleItems="4" />
         <antistatic.spinnerwheel.WheelHorizontalView android:id="@+id/ampm"
-                                                     android:layout_height="wrap_content"
-                                                     android:layout_width="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <antistatic.spinnerwheel.ScrollPickerView
+            android:id="@+id/scrollPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </RelativeLayout>

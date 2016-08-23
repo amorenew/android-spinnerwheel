@@ -61,7 +61,7 @@ public class ScrollPickerView extends RelativeLayout {
             }
         };
         //NumericWheelAdapter hourAdapter = new NumericWheelAdapter(getContext(), 1, 17, "%02d");
-        adapter.setItemResource(R.layout.wheel_text_centered);
+        adapter.setItemResource(R.layout.round_wheel_text_centered);
         adapter.setItemTextResource(R.id.text);
         picker.setViewAdapter(adapter);
     }
@@ -71,12 +71,16 @@ public class ScrollPickerView extends RelativeLayout {
         return picker;
     }
 
-    public void setName(int index) {
+    public void appendName(int index) {
         this.tvName.append(" " + Util.getLocalNumber(index));
     }
 
-    public void setName(String text) {
+    public void appendName(String text) {
         this.tvName.append(" " + text);
+    }
+
+    public void setName(String text) {
+        this.tvName.setText(text);
     }
 
     public int getCurrentItem() {
