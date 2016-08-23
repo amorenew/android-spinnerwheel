@@ -25,9 +25,6 @@ public class TimePickerCustomViewsActivity extends Activity {
 
         setContentView(R.layout.time_picker_custom);
         ScrollPickerView scrollPickerView = (ScrollPickerView) findViewById(R.id.scrollPicker);
-        scrollPickerView.setName("Child Age");
-        scrollPickerView.setMinimumValue(1);
-        scrollPickerView.setMaximumValue(17);
         final AbstractWheel hours = (AbstractWheel) findViewById(R.id.hour_horizontal);
         NumericWheelAdapter hourAdapter = new NumericWheelAdapter(this, 0, 23, "%02d");
         hourAdapter.setItemResource(R.layout.wheel_text_centered);
