@@ -46,15 +46,15 @@
             android:id="@+id/scrollPicker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:maxValue="12"
-            app:minValue="1"
             app:pickerBackground="#fcfcfc"
+            app:pickerMaximum="12"
+            app:pickerMinimum="1"
             app:pickerTextColor="#444"
             app:pickerTitle="Child Age"
             app:pickerTitleBackground="#FAFAFA"
             app:pickerTitleTextColor="#333"
             app:pickerTitleTextSize="15dp"
-            app:value="1"
-            app:visibleItemsCount="3" />
+            app:pickerValue="1"
+            app:pickerVisibleItems="3" />
     </LinearLayout>
 </RelativeLayout>

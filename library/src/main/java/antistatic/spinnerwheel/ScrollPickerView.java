@@ -48,9 +48,9 @@ public class ScrollPickerView extends RelativeLayout {
         inflate(getContext(), R.layout.view_scroll_picker, this);
         TypedArray typedArray =
                 getContext().obtainStyledAttributes(attrs, R.styleable.ScrollPicker);
-        minimumValue = typedArray.getInt(R.styleable.ScrollPicker_minValue,
+        minimumValue = typedArray.getInt(R.styleable.ScrollPicker_pickerMinimum,
                 1);
-        maximumValue = typedArray.getInt(R.styleable.ScrollPicker_maxValue,
+        maximumValue = typedArray.getInt(R.styleable.ScrollPicker_pickerMaximum,
                 17);
         adapter = new NumericWheelAdapter(getContext(), minimumValue, maximumValue) {
             @Override
@@ -76,7 +76,7 @@ public class ScrollPickerView extends RelativeLayout {
         picker.setViewAdapter(adapter);
         String title = typedArray.getString(R.styleable.ScrollPicker_pickerTitle);
         setName(title);
-        int visibleItems = typedArray.getInt(R.styleable.ScrollPicker_visibleItemsCount, 6);
+        int visibleItems = typedArray.getInt(R.styleable.ScrollPicker_pickerVisibleItems, 6);
         picker.setVisibleItems(visibleItems);
         int pickerBackgroundColor = typedArray.getColor(R.styleable.ScrollPicker_pickerBackground, Color.TRANSPARENT);
         picker.setBackgroundColor(pickerBackgroundColor);

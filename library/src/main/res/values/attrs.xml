@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="ScrollPicker">
-        <attr name="value" format="integer" />
-        <attr name="minValue" format="integer" />
-        <attr name="maxValue" format="integer" />
+        <attr name="pickerValue" format="integer" />
+        <attr name="pickerMinimum" format="integer" />
+        <attr name="pickerMaximum" format="integer" />
         <attr name="pickerTitle" format="string" />
-        <attr name="visibleItemsCount" format="integer" />
+        <attr name="pickerVisibleItems" format="integer" />
         <attr name="pickerBackground" format="color" />
         <attr name="pickerTextColor" format="color" />
         <attr name="pickerTitleBackground" format="color" />
