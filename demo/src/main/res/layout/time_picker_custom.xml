@@ -49,7 +49,7 @@
             app:pickerBackground="#fcfcfc"
             app:pickerMaximum="12"
             app:pickerMinimum="1"
-            app:pickerTextColor="#444"
+            app:pickerTextColor="#F33"
             app:pickerTitle="Child Age"
             app:pickerTitleBackground="#FAFAFA"
             app:pickerTitleTextColor="#333"
